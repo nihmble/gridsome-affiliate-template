@@ -23,4 +23,6 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+@import url('https://use.typekit.net/dsp4nck.css');
+</style>

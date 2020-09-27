@@ -2,6 +2,7 @@
 query {
   metadata {
     siteName
+    siteDescription
   }
 }
 </static-query>
@@ -11,9 +12,23 @@ query {
   <div class="relative bg-white">
     <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
       <div>
-        <a href="#" class="flex">
-          <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow" />
-          {{ $static.metadata.siteName }}
+        <a href="#" class="flex" :title="$static.metadata.siteDescription">
+          <svg class="h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.59 127.68">
+            <g data-name="Layer 2">
+              <text
+                transform="translate(0 99.48)"
+                font-size="120"
+                font-family="Menco-Light,Menco"
+                font-weight="300"
+                letter-spacing="-.05em"
+                data-name="Layer 1"
+              >
+                nihmb
+                <tspan x="268.31" y="0">l</tspan>
+                <tspan x="287.63" y="0">e</tspan>
+              </text>
+            </g>
+          </svg>
         </a>
       </div>
       <div class="-mr-2 -my-2 md:hidden">
