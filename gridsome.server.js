@@ -21,11 +21,21 @@ module.exports = function(api) {
         code: String
       }
 
+      type Category {
+        id: ID!
+        category: String
+      }
+
+      type Tags {
+        id: ID!
+        tags: String
+      }
+
       type Home implements Node {
         id: ID!
         title: String
-        heroImage: Image
-        heroText: Code
+        hero_image: Image
+        hero_text: Code
         section1: Code
         section2: Code
         section3: Code
@@ -37,17 +47,22 @@ module.exports = function(api) {
       type Blog implements Node {
         id: ID!
         title: String
-        heroImage: Image
-        body: String
+        hero_image: Image
+        content_section: Code
       }
 
       type Post implements Node {
         id: ID!
         title: String
         slug: String
-        date: Date
-        featuredImage: Image
-        body: String
+        created_date: Date
+        published_date: Date
+        category: Category
+        tags: [Tags]!
+        featured_image: Image
+        image_caption: String
+        excerpt: String
+        content_section: Code
       }
 
       type Pages implements Node {
@@ -55,8 +70,8 @@ module.exports = function(api) {
         title: String
         parent: String
         slug: String
-        heroImage: Image
-        body: String
+        hero_image: Image
+        content_section: Code
       }
 
       type SubPages implements Node {
@@ -64,8 +79,8 @@ module.exports = function(api) {
         title: String
         parent: String
         slug: String
-        heroImage: Image
-        body: String
+        hero_image: Image
+        content_section: Code
       }
     `)
   })

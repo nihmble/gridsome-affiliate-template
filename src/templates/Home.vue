@@ -1,16 +1,18 @@
 <page-query>
   query Home($id: ID!) {
     data: home(id: $id) {
-      heroImage
-      heroText { code }
+      hero_image
+      hero_text { code }
+      section1 { code }
     }
   }
 </page-query>
 
 <template>
   <Layout>
-    <img :src="$page.data.heroImage" alt="">
-    <p v-html="$page.data.heroText.code" />
+    <img :src="$page.data.hero_image" alt="">
+    <div v-html="$page.data.hero_text.code" />
+    <div v-html="$page.data.section1.code" />
   </Layout>
 </template>
 

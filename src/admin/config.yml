@@ -18,8 +18,8 @@ collections:
     slug: "index"
     fields:
       - {label: "Homepage Title", name: "title", widget: "string", default: "index"}
-      - {label: "Hero Image", name: "heroImage", widget: "image"}
-      - {label: "Hero Text", name: "heroText", widget: "code"}
+      - {label: "Hero Image", name: "hero_image", widget: "image"}
+      - {label: "Hero Text", name: "hero_text", widget: "code"}
       - {label: "Section 1", name: "section1", widget: "code", required: false}
       - {label: "Section 2", name: "section2", widget: "code", required: false}
       - {label: "Section 3", name: "section3", widget: "code", required: false}
@@ -33,8 +33,8 @@ collections:
     slug: "index"
     fields:
       - {label: "Title", name: "title", widget: "string", default: "Blog"}
-      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Content", name: "content_section", widget: "code", required: false}
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
     folder: "_content/blog/posts" # The path to the folder where the documents are stored
@@ -42,13 +42,16 @@ collections:
     create: true # Allow users to create new documents in this collection
     # slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string", required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
-      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Created Date", name: "created_date", widget: "datetime"}
+      - {label: "Publish Date", name: "published_date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "list", default: ["Category Default Entry"]}
+      - {label: "Tags", name: "tags", widget: "list", default: ["Testing Tags", "This is a Test", "New Tag"]}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Image Caption", name: "image_caption", widget: "string", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "markdown"}
+      - {label: "Content", name: "content_section", widget: "code"}
   - name: "pages"
     label: "Pages"
     folder: "_content/pages"
@@ -58,6 +61,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Parent Page", name: "parent", widget: "string", required: false, hint: "By specifying a Parent Page this page will become a sub page. e.g. service/your-page"}
       - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Title will be used if Slug is left empty"}
-      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Content", name: "content_section", widget: "code"}
     
