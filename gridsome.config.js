@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Nihmble Affiliate Template',
-  siteDescription: 'You\'re going to be an interesting companion, Mr. Data.',
+  siteDescription: "You're going to be an interesting companion, Mr. Data.",
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -63,6 +63,13 @@ module.exports = {
         typeName: 'SubPages'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: '_content/contact/*.md',
+        typeName: 'Contact'
+      }
+    },
 
     /**
      * Plugins
@@ -89,8 +96,9 @@ module.exports = {
   templates: {
     Home: '/',
     Blog: '/blog',
-    Post: '/blog/post/:title',
+    Post: '/post/:title',
     Pages: '/:title',
-    SubPages: '/:parent/:title'
+    SubPages: '/:parent/:title',
+    Contact: '/contact'
   }
 }
