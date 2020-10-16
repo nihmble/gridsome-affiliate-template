@@ -4,16 +4,6 @@ query {
     siteName
     siteDescription
   }
-
-  nav: allPages {
-    edges {
-      node {
-        id
-        title
-        path
-      }
-    }
-  }
 }
 </static-query>
 
@@ -38,15 +28,40 @@ query {
       </div>
       <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
         <nav class="flex space-x-10">
-          <template v-for="edge in $static.nav.edges">
-            <a
-              :href="edge.node.path"
-              class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
-              :key="edge.node.id"
-            >
-              {{ edge.node.title }}
-            </a>
-          </template>
+          <a
+            href="/"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            Home
+          </a>
+
+          <a
+            href="/about"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            About
+          </a>
+
+          <a
+            href="/blog"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            Blog
+          </a>
+
+          <a
+            href="/contact"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            Contact
+          </a>
+
+          <a
+            href="/resources"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            Resources
+          </a>
         </nav>
       </div>
     </div>
