@@ -34,14 +34,14 @@ module.exports = function(api) {
       type Home implements Node {
         id: ID!
         title: String
+        getting_started: Code
         hero_image: Image
         hero_text: Code
-        section1: Code
-        section2: Code
-        section3: Code
-        section4: Code
-        section5: Code
-        section6: Code
+        content_section1: Code
+        content_section2: Code
+        content_section3: Code
+        content_section4: Code
+        content_section5: Code
       }
 
       type Blog implements Node {

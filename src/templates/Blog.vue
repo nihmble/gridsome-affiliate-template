@@ -31,7 +31,7 @@
     <div class="container max-w-full">
       <h1>Foo! {{ $page.data.title }}</h1>
       {{ $page.data.content }}
-      <div v-html="$page.data.content_section.code" />
+      <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
 
       <ul>
         <li v-for="edge in $page.post.edges" :key="edge.node.id">

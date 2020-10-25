@@ -17,22 +17,22 @@ collections:
     create: true
     slug: "index"
     fields:
-      - {label: "Homepage Title", name: "title", widget: "string", default: "index"}
-      - {label: "Hero Image", name: "hero_image", widget: "image"}
-      - {label: "Hero Text", name: "hero_text", widget: "code"}
-      - {label: "Section 1", name: "section1", widget: "code", required: false}
-      - {label: "Section 2", name: "section2", widget: "code", required: false}
-      - {label: "Section 3", name: "section3", widget: "code", required: false}
-      - {label: "Section 4", name: "section4", widget: "code", required: false}
-      - {label: "Section 5", name: "section5", widget: "code", required: false}
-      - {label: "Section 6", name: "section6", widget: "code", required: false}
+      - {label: "Homepage Title", name: "title", widget: "hidden", default: "index"}
+      - {label: "Getting Started Banner", name: "getting_started", widget: "code", required: false}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Hero Text", name: "hero_text", widget: "code", required: false}
+      - {label: "Content Section [Row 1]", name: "content_section1", widget: "code", required: false}
+      - {label: "Content Section [Row 2]", name: "content_section2", widget: "code", required: false}
+      - {label: "Content Section [Row 3]", name: "content_section3", widget: "code", required: false}
+      - {label: "Content Section [Row 4]", name: "content_section4", widget: "code", required: false}
+      - {label: "Content Section [Row 5]", name: "content_section5", widget: "code", required: false}
   - name: "blog"
     label: "Blog"
     folder: "_content/blog"
     create: true
     slug: "index"
     fields:
-      - {label: "Title", name: "title", widget: "string", default: "Blog"}
+      - {label: "Title", name: "title", widget: "hidden", default: "blog"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
       - {label: "Content", name: "content_section", widget: "code", required: false}
   - name: "posts" # Used in routes, e.g., /admin/collections/blog

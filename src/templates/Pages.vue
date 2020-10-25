@@ -11,7 +11,7 @@
   <Layout>
     <div class="container max-w-full">
       {{ $page.data.title }}
-      <div v-html="$page.data.content_section.code" />
+      <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
     </div>
   </Layout>
 </template>
