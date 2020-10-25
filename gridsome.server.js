@@ -57,7 +57,7 @@ module.exports = function(api) {
         slug: String
         created_date: Date
         published_date: Date
-        category: Category
+        category: [Category]!
         tags: [Tags]!
         featured_image: Image
         image_caption: String
