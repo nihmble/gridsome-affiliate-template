@@ -11,6 +11,7 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.3",
+    "dayjs": "^1.9.4",
     "gridsome": "^0.7.21",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-tailwindcss": "^3.0.1",
