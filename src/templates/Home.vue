@@ -42,11 +42,26 @@
 
     <LatestBlogPosts />
 
-    <div id="content_section1" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
-    <div id="content_section2" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
-    <div id="content_section3" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
-    <div id="content_section4" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
-    <div id="content_section5" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />
+    <section id="content_section1" class="max-w-7xl bg-red-400 mt-4 sm:mt-12" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
+
+    <section class="max-w-7xl bg-red-400 mt-4 sm:mt-12">
+      <div class="max-w-6xl mx-auto content-center pt-8 pb-12 px-4 text-center">
+        <h4 class="text-base text-4xl mb-4 leading-10">
+          Should you be using Twitter? Facebook? Pinterest?
+        </h4>
+        <p class="text-xl">
+          Social media doesn’t have to be confusing. Let FoodTruckr show you how. 
+          Sign up to receive the FoodTruckr Bulletin and we’ll throw in our free guide:
+          <span class="font-bold">6 Free Social Media Tools to Get People Talking About Your Food Truck.</span>
+        </p>
+        
+      </div>
+    </section>
+
+    <section id="content_section2" class="max-w-7xl bg-orange-400 mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
+    <section id="content_section3" class="max-w-7xl bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
+    <section id="content_section4" class="max-w-7xl bg-green-400 mt-4 sm:mt-12" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
+    <section id="content_section5" class="max-w-7xl bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />
   </Layout>
 </template>
 
