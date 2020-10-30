@@ -10,23 +10,6 @@
       content_section4 { code }
       content_section5 { code }
     }
-
-    post: allPost(perPage: 5, order: DESC, sortBy: "published_date") @paginate  {
-      totalCount
-      pageInfo {
-        totalPages
-        currentPage
-      }
-      edges {
-        node {
-          title
-          excerpt
-          path
-          published_date
-          featured_image(width:800)
-        }
-      }
-    }
   }
 </page-query>
 
@@ -57,45 +40,7 @@
     <!-- <img id="hero_image" :src="$page.data.hero_image" alt="" />
     <div id="hero_text" v-html="$page.data.hero_text ? $page.data.hero_text.code : ''" /> -->
 
-    <section class="max-w-7xl" v-if="$page.post.edges">
-      <div class="max-w-6xl mx-auto">
-        <ul id="latest-blog-posts" class="flex flex-col flex-wrap">
-          <li v-for="(edge, index) in $page.post.edges" :key="edge.node.id" :class="`post-${index} p-4 sm:p-0`">
-            <article>
-              <header>
-                <h2 class="post-title-bar text-xl sm:text-5xl font-semibold">
-                  <a :href="edge.node.path" class="block h-full">
-                    {{ edge.node.title }}
-                  </a>
-                </h2>
-                <h4 v-if="index === 0" class="post-subtitle-bar text-lg">
-                  {{ prettyDate(edge.node.published_date) }}
-                </h4>
-              </header>
-
-              <a :href="edge.node.path">
-                <img v-if="edge.node.featured_image" :src="`/uploads/${edge.node.featured_image}`" :alt="`Featured image for ${edge.node.title}`" />
-              </a>
-
-              <div v-if="index === 0">
-                <div v-html="edge.node.excerpt" class="post-excerpt text-lg sm:text-md" />
-
-                <div class="post-footer">
-                  <a
-                    :href="edge.node.path"
-                    class="inline-block mx-auto sm:mr-0 py-2 px-4 bg-gray-500 hover:bg-gray-400 border-b-4 border-gray-700 hover:border-gray-500 rounded"
-                  >
-                    <span class="text-xl font-bold text-white">
-                      Read more...
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <LatestBlogPosts />
 
     <div id="content_section1" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
     <div id="content_section2" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
@@ -106,89 +51,17 @@
 </template>
 
 <script>
+// Packages
 import dayjs from 'dayjs'
 
+// Components
+import LatestBlogPosts from '@/components/LatestBlogPosts'
+
 export default {
-  methods: {
-    prettyDate(date) {
-      return dayjs(date).format('MMMM DD, YYYY')
-    }
+  components: {
+    LatestBlogPosts
   }
 }
 </script>
 
-<style lang="less">
-#latest-blog-posts {
-  .post-0 {
-    .post-title-bar {
-      background-color: #777;
-      border-bottom: solid 4px #555;
-      color: #fff;
-      padding: 0.25rem 1rem;
-
-      a {
-        display: block;
-        height: 100%;
-      }
-    }
-
-    .post-subtitle-bar {
-      background-color: #666;
-      color: #fff;
-      padding: 0.25rem 1rem;
-    }
-
-    .post-excerpt {
-      padding: 1rem 0;
-    }
-  }
-
-  .post-1,
-  .post-2,
-  .post-3,
-  .post-4 {
-    .post-title-bar {
-      background-color: #333;
-      color: #fff;
-      padding: 0.5rem;
-      font-size: 1.1rem;
-      font-weight: normal;
-
-      a {
-        display: block;
-        height: 100%;
-      }
-    }
-  }
-}
-
-@media (min-width: 640px) {
-  #latest-blog-posts {
-    height: 850px;
-
-    .post-0 {
-      border: solid 1px #999;
-      width: 72%;
-      height: 800px;
-      margin-right: 2rem;
-
-      .post-excerpt {
-        padding: 1rem;
-      }
-    }
-
-    .post-1,
-    .post-2,
-    .post-3,
-    .post-4 {
-      width: 25%;
-      padding-bottom: 0.75rem;
-
-      .post-title-bar {
-        font-size: 1rem;
-        font-weight: bold;
-      }
-    }
-  }
-}
-</style>
+<style lang="less"></style>
