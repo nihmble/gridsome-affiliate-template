@@ -9,8 +9,8 @@ query {
 
 <template>
   <!-- This example requires Tailwind CSS v1.4.0+ -->
-  <div class="relative bg-white">
-    <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+  <div class="relative bg-white max-w-7xl border-b-2 border-gray-200">
+    <div class="flex justify-between items-center px-2 py-6 md:justify-start md:space-x-10 max-w-6xl mx-auto">
       <a href="/" class="flex" :title="$static.metadata.siteDescription">
         <img class="h-12 w-auto sm:h-10" src="/uploads/logo.svg" alt="Workflow" />
       </a>
@@ -26,7 +26,7 @@ query {
           </svg>
         </button>
       </div>
-      <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
+      <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12 justify-end">
         <nav class="flex space-x-10">
           <a
             href="/"

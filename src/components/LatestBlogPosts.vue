@@ -122,7 +122,7 @@ export default {
 @media (min-width: 640px) {
   #latest-blog-posts {
     .post-0 {
-      width: 72%;
+      max-width: 72%;
       margin-right: 2rem;
     }
 
@@ -130,7 +130,7 @@ export default {
     .post-2,
     .post-3,
     .post-4 {
-      width: 25%;
+      max-width: 25%;
       padding-bottom: 0.75rem;
 
       .post-title-bar {

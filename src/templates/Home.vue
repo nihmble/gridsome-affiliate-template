@@ -88,7 +88,41 @@
       </div>
     </section> -->
 
-    <section id="content_section2" class="max-w-7xl bg-orange-400 mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
+    <section id="content_section2" class="max-w-7xl mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
+
+    <!-- <section class="max-w-7xl mt-4 sm:mt-12">
+      <div class="max-w-6xl mx-auto pt-8 pb-12 px-4 flex flex-wrap">
+        <div class="w-full sm:w-1/2 p-4 bg-white border border-gray-600 text-base text-lg">
+          <h1 class="text-base text-4xl mb-4">
+            This should be interesting.
+          </h1>
+          <p class="mb-4">
+            This should be interesting. Damage report! What? We're not at all alike! Fate protects fools, little children and ships named Enterprise. Computer,
+            lights up! Well, that's certainly good to know.
+          </p>
+          <p class="mb-4">
+            The Enterprise computer system is controlled by three primary main processor cores, cross-linked with a redundant melacortz ramistat, fourteen
+            kiloquad interface modules. Did you come here for something in particular or just general Riker-bashing?
+          </p>
+          <p class="mb-4">
+            We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. I can't. As much as I care about you, my
+            first duty is to the ship. Congratulations - you just destroyed the Enterprise. Now we know what they mean by 'advanced' tactical training. You did
+            exactly what you had to do.
+          </p>
+          <p>
+            Now, how the hell do we defeat an enemy that knows us better than we know ourselves?
+          </p>
+        </div>
+        <div class="w-full sm:w-1/2 py-4 px-4 sm:pl-8">
+          <p class="mb-4">
+            We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. I can't. As much as I care about you, my
+            first duty is to the ship. Congratulations - you just destroyed the Enterprise. Now we know what they mean by 'advanced' tactical training. You did
+            exactly what you had to do.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
     <section id="content_section3" class="max-w-7xl bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
     <section id="content_section4" class="max-w-7xl bg-green-400 mt-4 sm:mt-12" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
     <section id="content_section5" class="max-w-7xl bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />

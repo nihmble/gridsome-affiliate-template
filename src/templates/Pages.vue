@@ -9,19 +9,17 @@
 
 <template>
   <Layout>
-    <div class="container max-w-full">
-      {{ $page.data.title }}
-      <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
-    </div>
+    <section class="max-w-7xl py-4 mt-4 bg-gray-400">
+      <div class="max-w-6xl mx-auto">
+        {{ $page.data.title }}
+        <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
+      </div>
+    </section>
   </Layout>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>
