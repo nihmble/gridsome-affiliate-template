@@ -26,7 +26,7 @@ query {
           </svg>
         </button>
       </div>
-      <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12 justify-end">
+      <div class="hidden md:flex-1 md:flex md:items-center md:space-x-12 justify-end">
         <nav class="flex space-x-10">
           <a
             href="/"
