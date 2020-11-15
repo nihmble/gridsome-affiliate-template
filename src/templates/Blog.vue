@@ -28,31 +28,13 @@
 
 <template>
   <Layout>
-    <!-- <div class="container max-w-full">
-      <h1>Foo! {{ $page.data.title }}</h1>
-      {{ $page.data.content }}
-      <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
-
-      <ul>
-        <li v-for="edge in $page.post.edges" :key="edge.node.id">
-          <article>
-            <a :href="edge.node.path">{{ edge.node.title }}</a>
-            <div v-html="edge.node.excerpt" />
-          </article>
-        </li>
-      </ul>
-    </div> -->
     <section class="max-w-7xl mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto clearfix">
-        <!-- <h1>{{ $page.data.title }}</h1>
-        {{ $page.data.content }}
-        <div v-html="$page.data.content_section ? $page.data.content_section.code : ''" /> -->
-
         <ul id="blog-posts">
           <li v-for="edge in $page.posts.edges" :key="edge.node.id" class="mb-8">
             <article>
               <header>
-                <h2 class="post-title-bar text-xl sm:text-5xl font-semibold">
+                <h2 class="post-title-bar text-xl sm:text-4xl font-semibold">
                   <a :href="edge.node.path" class="block h-full">
                     {{ edge.node.title }}
                   </a>
@@ -81,11 +63,6 @@
             </article>
           </li>
         </ul>
-
-        <!-- totalCount: {{ $page.totalCount }}<br />
-        pageInfo: {{ $page.pageInfo }}<br /> -->
-        <!-- totalPages: {{ $page.pageInfo.totalPages }}<br /> -->
-        <!-- currentPage: {{ $page.pageInfo.currentPage }} -->
 
         <Pager class="pagination" :info="$page.posts.pageInfo" />
       </div>
