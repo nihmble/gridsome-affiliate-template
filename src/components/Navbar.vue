@@ -9,7 +9,7 @@ query {
 
 <template>
   <!-- This example requires Tailwind CSS v1.4.0+ -->
-  <div class="relative bg-white max-w-7xl border-b-2 border-gray-200">
+  <div class="relative bg-white w-full border-b-2 border-gray-200">
     <div class="flex justify-between items-center px-2 py-6 md:justify-start md:space-x-10 max-w-6xl mx-auto">
       <a href="/" class="flex" :title="$static.metadata.siteDescription">
         <img class="h-12 w-auto sm:h-10" src="/uploads/logo.svg" alt="Workflow" />

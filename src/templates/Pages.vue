@@ -9,7 +9,7 @@
 
 <template>
   <Layout>
-    <section class="max-w-7xl py-4 mt-4">
+    <section class="w-full py-4 mt-4">
       <div class="max-w-6xl mx-auto">
         <div class="border border-gray-400">
           <div class="bg-gray-600 px-4 py-2 text-center">

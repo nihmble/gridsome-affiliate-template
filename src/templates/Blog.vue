@@ -28,7 +28,7 @@
 
 <template>
   <Layout>
-    <section class="max-w-7xl mt-4 sm:mt-12">
+    <section class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex flex-wrap">
         <div class="w-full sm:w-3/4 sm:pr-8">
           <ul id="blog-posts">
@@ -39,22 +39,22 @@
                     <g-image v-if="edge.node.featured_image" :src="`/uploads/${edge.node.featured_image}`" :alt="`Featured image for ${edge.node.title}`" />
                   </a>
 
-                  <h1 class="post-title-bar text-xl sm:text-2xl font-semibold mt-4 px-4">
+                  <h1 class="post-title-bar text-xl sm:text-2xl font-semibold mt-4 px-4 sm:px-0 hover:text-gray-600">
                     <a :href="edge.node.path" class="block h-full">
                       {{ edge.node.title }}
                     </a>
                   </h1>
-                  <h4 class="post-subtitle-bar text-md px-4">
+                  <h4 class="post-subtitle-bar text-md px-4 sm:px-0">
                     {{ edge.node.published_date | prettyDate }}
                   </h4>
                 </header>
 
-                <div v-html="edge.node.excerpt" class="post-excerpt text-lg sm:text-md p-4 sm:px-4 sm:py-6" />
+                <div v-html="edge.node.excerpt" class="post-excerpt text-lg sm:text-md p-4 sm:px-0 sm:py-6" />
 
                 <footer>
                   <a
                     :href="edge.node.path"
-                    class="inline-block mx-auto sm:mr-0 py-2 px-4"
+                    class="inline-block mx-auto sm:mr-0 py-2 px-4 sm:px-0"
                   >
                     <span class="text-md font-bold uppercase">
                       Read more...
@@ -67,7 +67,7 @@
 
           <Pager class="pagination" :info="$page.posts.pageInfo" />
         </div>
-        <div class="w-full sm:w-1/4 pr-8 bg-gray-400">asdf</div>
+        <div class="w-full sm:w-1/4 pr-8 bg-gray-400"></div>
       </div>
     </section>
   </Layout>

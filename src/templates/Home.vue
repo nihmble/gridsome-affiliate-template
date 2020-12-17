@@ -17,7 +17,7 @@
   <Layout>
     <div id="getting-started" v-html="$page.data.getting_started ? $page.data.getting_started.code : ''" />
 
-    <!-- <section class="max-w-7xl py-4 bg-gray-400">
+    <!-- <section class="w-full py-4 bg-gray-400">
       <div class="max-w-6xl mx-auto">
         <div class="flex">
           <div class="md:w-2/3 md:pr-2 text-center md:text-left">
@@ -42,9 +42,9 @@
 
     <LatestBlogPosts />
 
-    <section id="content_section1" class="max-w-7xl bg-gray-400 mt-4 sm:mt-12" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
+    <section id="content_section1" class="w-full bg-gray-400 mt-4 sm:mt-12" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
 
-    <!-- <section class="max-w-7xl bg-red-400 mt-4 sm:mt-12">
+    <!-- <section class="w-full bg-red-400 mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto content-center pt-8 pb-12 px-4 text-center">
         <h4 class="text-base text-4xl mb-4 leading-10">
           Should you be using Twitter? Facebook? Pinterest?
@@ -88,9 +88,9 @@
       </div>
     </section> -->
 
-    <section id="content_section2" class="max-w-7xl mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
+    <section id="content_section2" class="w-full mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
 
-    <!-- <section class="max-w-7xl mt-4 sm:mt-12">
+    <!-- <section class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto pt-8 pb-12 px-4 flex flex-wrap">
         <div class="w-full sm:w-1/2 p-4 bg-white border border-gray-600 text-base text-lg">
           <h1 class="text-base text-4xl mb-4">
@@ -123,9 +123,9 @@
       </div>
     </section> -->
 
-    <section id="content_section3" class="max-w-7xl bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
-    <section id="content_section4" class="max-w-7xl bg-green-400 mt-4 sm:mt-12" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
-    <section id="content_section5" class="max-w-7xl bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />
+    <section id="content_section3" class="w-full bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
+    <section id="content_section4" class="w-full bg-green-400 mt-4 sm:mt-12" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
+    <section id="content_section5" class="w-full bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />
   </Layout>
 </template>
 

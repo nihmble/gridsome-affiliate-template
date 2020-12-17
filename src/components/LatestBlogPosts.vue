@@ -20,8 +20,8 @@
 </static-query>
 
 <template>
-  <section class="max-w-7xl mt-4 sm:mt-12" v-if="$static.posts.edges">
-    <div class="max-w-6xl mx-auto clearfix">
+  <section class="w-full mt-4 sm:mt-12" v-if="$static.posts.edges">
+    <div class="max-w-6xl mx-auto flow-root">
       <ul id="latest-blog-posts">
         <li v-for="(edge, index) in $static.posts.edges" :key="edge.node.id" :class="`post-${index} mx-4 my-2 sm:m-0 sm:p-0 float-left`">
           <article>

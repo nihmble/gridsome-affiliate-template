@@ -13,7 +13,7 @@
 
 <template>
   <Layout>
-    <div class="max-w-7xl mt-4 sm:mt-12">
+    <div class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex">
         <article class="w-full sm:w-3/4 sm:pr-8">
           <header>
