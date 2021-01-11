@@ -38,6 +38,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: '_content/contact/*.md',
+        typeName: 'Contact'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: '_content/blog/*.md',
         typeName: 'Blog'
       }
@@ -61,13 +68,6 @@ module.exports = {
       options: {
         path: '_content/pages/**/*.md',
         typeName: 'SubPages'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: '_content/contact/*.md',
-        typeName: 'Contact'
       }
     },
 

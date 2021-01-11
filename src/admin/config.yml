@@ -32,7 +32,7 @@ collections:
     create: true
     slug: "index"
     fields:
-      - {label: "Title", name: "title", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "hidden", default: "Blog"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
       - {label: "Content", name: "content_section", widget: "code", required: false}
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -64,4 +64,24 @@ collections:
       - {label: "Navigation Order", name: "nav_order", widget: "number", required: false, default: 0, hint: "This is the order in which it will display in the main navigation"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
       - {label: "Content", name: "content_section", widget: "code"}
+  # - name: "contact"
+  #   label: "Contact"
+  #   folder: "_content/contact"
+  #   path: "{{parent}}/{{slug}}"
+  #   create: true
+  #   fields:
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Title will be used if Slug is left empty"}
+  #     - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+  #     - {label: "Content", name: "content_section", widget: "code"}
+
+  - name: "contact"
+    label: "Contact"
+    folder: "_content/contact"
+    create: true
+    slug: "index"
+    fields:
+      - {label: "Title", name: "title", widget: "hidden", default: "Contact"}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Content", name: "content_section", widget: "code", required: false}
     

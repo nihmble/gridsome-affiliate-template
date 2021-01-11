@@ -52,10 +52,7 @@
                 <div v-html="edge.node.excerpt" class="post-excerpt text-lg sm:text-md p-4 sm:px-0 sm:py-6" />
 
                 <footer>
-                  <a
-                    :href="edge.node.path"
-                    class="inline-block mx-auto sm:mr-0 py-2 px-4 sm:px-0"
-                  >
+                  <a :href="edge.node.path" class="inline-block mx-auto sm:mr-0 py-2 px-4 sm:px-0">
                     <span class="text-md font-bold uppercase">
                       Read more...
                     </span>
@@ -90,18 +87,52 @@ export default {
 </script>
 
 <style lang="less">
+// .pagination {
+//   @apply my-4;
+
+//   a {
+//     @apply mx-2 w-12 h-12 text-center items-center justify-center border border-gray-400 inline-block rounded-full font-semibold inline-flex;
+
+//     &.active {
+//       @apply bg-gray-600 text-white;
+//     }
+
+//     &:hover {
+//       @apply bg-gray-200;
+//     }
+//   }
+// }
+
 .pagination {
-  @apply my-4;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   a {
-    @apply mx-2 w-12 h-12 text-center items-center justify-center border border-gray-400 inline-block rounded-full font-semibold inline-flex;
+    color: #4B5563;
+    width: 3rem;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 3rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-width: 1px;
+    border-radius: 9999px;
+    --tw-border-opacity: 1;
+    border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 
     &.active {
-      @apply bg-gray-600 text-white;
+      --tw-bg-opacity: 1;
+      background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+      color: white;
     }
 
     &:hover {
-      @apply bg-gray-200;
+      color: #4B5563;
+      --tw-bg-opacity: 1;
+      background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     }
   }
 }

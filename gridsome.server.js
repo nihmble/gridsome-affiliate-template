@@ -82,6 +82,13 @@ module.exports = function(api) {
         hero_image: Image
         content_section: Code
       }
+
+      type Contact implements Node {
+        id: ID!
+        title: String
+        hero_image: Image
+        content_section: Code
+      }
     `)
   })
 }
