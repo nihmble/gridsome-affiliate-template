@@ -15,7 +15,7 @@
     "dayjs": "^1.10.3",
     "gridsome": "^0.7.23",
     "gridsome-plugin-netlify-cms": "^1.0.9",
-    "netlify-cms": "^2.10.81",
+    "netlify-cms": "^2.10.82",
     "postcss": "^8.2.4",
     "tailwindcss": "^2.0.2",
     "vuex": "^3.6.0"

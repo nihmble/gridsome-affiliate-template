@@ -7764,7 +7764,7 @@ netlify-cms-widget-text@^2.3.4:
   dependencies:
     react-textarea-autosize "^8.0.0"
 
-netlify-cms@^2.10.81:
+netlify-cms@^2.10.82:
   version "2.10.82"
   resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.10.82.tgz#d79e37cb36cae519132591cdc1995f723f4b2cb6"
   integrity sha512-tDy54r31FMH1tapi1qXDNkVetjMFYRpoO48JcCYgmK9OEuWdmvQc5wtbl13sfq7tIevuLIMn0iW+vlTZx2nOhA==
