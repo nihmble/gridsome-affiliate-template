@@ -36,7 +36,7 @@
               <article>
                 <header>
                   <a :href="edge.node.path">
-                    <g-image v-if="edge.node.featured_image" :src="`/uploads/${edge.node.featured_image}`" :alt="`Featured image for ${edge.node.title}`" />
+                    <g-image v-if="edge.node.featured_image" :src="edge.node.featured_image.replace('/static', '')" :alt="`Featured image for ${edge.node.title}`" />
                   </a>
 
                   <h1 class="post-title-bar text-xl sm:text-2xl font-semibold mt-4 px-4 sm:px-0 hover:text-gray-600">

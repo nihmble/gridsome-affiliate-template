@@ -13,6 +13,7 @@
           path
           published_date
           featured_image(width:800)
+          thumbnail
         }
       }
     }
@@ -37,7 +38,7 @@
             </header>
 
             <a :href="edge.node.path">
-              <g-image v-if="edge.node.featured_image" :src="`/uploads/${edge.node.featured_image}`" :alt="`Featured image for ${edge.node.title}`" />
+              <g-image v-if="edge.node.thumbnail" :src="edge.node.thumbnail.replace('/static', '')" :alt="`Featured image for ${edge.node.title}`" />
             </a>
 
             <div v-if="index === 0">

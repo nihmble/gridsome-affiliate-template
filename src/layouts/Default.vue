@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 // Components
 import Footer from '../components/Footer.vue'
 import Navbar from '../components/Navbar.vue'

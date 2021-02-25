@@ -41,6 +41,7 @@ collections:
     path: "{{year}}/{{month}}/{{slug}}"
     create: true # Allow users to create new documents in this collection
     # slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/static/uploads"
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string", required: false}
@@ -48,10 +49,12 @@ collections:
       - {label: "Publish Date", name: "published_date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "list", default: ["Category Default Entry"]}
       - {label: "Tags", name: "tags", widget: "list", default: ["Testing Tags", "This is a Test", "New Tag"]}
-      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Featured Image", name: "featured_image", widget: "image", media_folder: "/static/uploads"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", media_folder: "/static/uploads"}
       - {label: "Image Caption", name: "image_caption", widget: "string", required: false}
       - {label: "Excerpt", name: "excerpt", widget: "markdown"}
-      - {label: "Content", name: "content_section", widget: "code"}
+      - {label: "Content", name: "content_section", widget: "markdown", required: false}
+      - {label: "Code", name: "code_section", widget: "code", required: false}
   - name: "pages"
     label: "Pages"
     folder: "_content/pages"

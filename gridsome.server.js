@@ -60,9 +60,11 @@ module.exports = function(api) {
         category: [Category]!
         tags: [Tags]!
         featured_image: Image
+        thumbnail: Image
         image_caption: String
         excerpt: String
-        content_section: Code
+        content_section: String
+        code_section: Code
       }
 
       type Pages implements Node {

@@ -6,7 +6,8 @@
       category { category }
       featured_image(width:800)
       image_caption
-      content_section { code }
+      content_section
+      code_section { code }
     }
   }
 </page-query>
@@ -25,9 +26,10 @@
             </h4>
           </header>
 
-          <g-image v-if="$page.post.featured_image" :src="`/uploads/${$page.post.featured_image}`" :alt="`Featured image for ${$page.post.title}`" />
+          <g-image v-if="$page.post.featured_image" :src="$page.post.featured_image.replace('/static', '')" :alt="`Featured image for ${$page.post.title}`" />
 
-          <div v-html="$page.post.content_section ? $page.post.content_section.code : ''" />
+          <div v-html="$page.post.content_section ? $page.post.content_section : ''" />
+          <div v-html="$page.post.code_section ? $page.post.code_section.code : ''" />
         </article>
         <div class="w-full h-full sm:w-1/4 bg-gray-200">
           <p class="mb-4">
