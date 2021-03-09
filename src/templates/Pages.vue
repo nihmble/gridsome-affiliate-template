@@ -2,7 +2,7 @@
   query Pages($id: ID!) {
     data: pages(id: $id) {
       title
-      content_section { code }
+      html { code }
     }
   }
 </page-query>
@@ -18,7 +18,7 @@
             </h1>
           </div>
 
-          <section class="bg-white px-4 py-6 max-w-4xl mx-auto" v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
+          <section class="bg-white px-4 py-6 max-w-4xl mx-auto" v-html="$page.data.html.code" />
 
           <!-- <section class="bg-gray-400 mt-4">
             <div class="max-w-4xl mx-auto content-center pt-8 pb-12 px-4 text-center">

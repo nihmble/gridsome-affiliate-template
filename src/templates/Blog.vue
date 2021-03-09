@@ -2,7 +2,7 @@
   query Blog($id: ID!, $page: Int) {
     data: blog(id: $id) {
       title
-      content_section { code }
+      html { code }
     }
 
     posts: allPost(perPage: 6, page: $page, order: DESC, sortBy: "published_date") @paginate  {

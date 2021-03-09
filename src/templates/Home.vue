@@ -4,11 +4,11 @@
       getting_started { code }
       hero_image
       hero_text { code }
-      content_section1 { code }
-      content_section2 { code }
-      content_section3 { code }
-      content_section4 { code }
-      content_section5 { code }
+      section1 { code }
+      section2 { code }
+      section3 { code }
+      section4 { code }
+      section5 { code }
     }
   }
 </page-query>
@@ -42,7 +42,7 @@
 
     <LatestBlogPosts />
 
-    <section id="content_section1" class="w-full bg-gray-400 mt-4 sm:mt-12" v-if="$page.data.content_section1" v-html="$page.data.content_section1.code" />
+    <section id="section1" class="w-full bg-gray-400 mt-4 sm:mt-12" v-if="$page.data.section1" v-html="$page.data.section1.code" />
 
     <!-- <section class="w-full bg-red-400 mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto content-center pt-8 pb-12 px-4 text-center">
@@ -88,7 +88,7 @@
       </div>
     </section> -->
 
-    <section id="content_section2" class="w-full mt-4 sm:mt-12" v-if="$page.data.content_section2" v-html="$page.data.content_section2.code" />
+    <section id="section2" class="w-full mt-4 sm:mt-12" v-if="$page.data.section2" v-html="$page.data.section2.code" />
 
     <!-- <section class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto pt-8 pb-12 px-4 flex flex-wrap">
@@ -123,9 +123,9 @@
       </div>
     </section> -->
 
-    <section id="content_section3" class="w-full bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.content_section3" v-html="$page.data.content_section3.code" />
-    <section id="content_section4" class="w-full bg-green-400 mt-4 sm:mt-12" v-if="$page.data.content_section4" v-html="$page.data.content_section4.code" />
-    <section id="content_section5" class="w-full bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.content_section5" v-html="$page.data.content_section5.code" />
+    <section id="section3" class="w-full bg-yellow-400 mt-4 sm:mt-12" v-if="$page.data.section3" v-html="$page.data.section3.code" />
+    <section id="section4" class="w-full bg-green-400 mt-4 sm:mt-12" v-if="$page.data.section4" v-html="$page.data.section4.code" />
+    <section id="section5" class="w-full bg-teal-400 mt-4 sm:mt-12" v-if="$page.data.section5" v-html="$page.data.section5.code" />
   </Layout>
 </template>
 

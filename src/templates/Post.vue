@@ -1,24 +1,10 @@
-<page-query>
-  query Post($id: ID!) {
-    post(id: $id) {
-      title
-      published_date
-      category { category }
-      featured_image(width:800)
-      image_caption
-      content_section
-      code_section { code }
-    }
-  }
-</page-query>
-
 <template>
   <Layout>
     <div class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex">
-        <article class="w-full sm:w-3/4 sm:pr-8">
-          <header>
-            <h1 class="post-title-bar text-xl sm:text-4xl font-semibold">
+        <article class="w-full sm:w-auto sm:px-0 px-4">
+          <header class="mb-4">
+            <h1 class="post-title-bar text-xl sm:text-4xl font-semibold mb-2">
               {{ $page.post.title }}
             </h1>
             <h4 class="post-subtitle-bar text-lg">
@@ -28,10 +14,12 @@
 
           <g-image v-if="$page.post.featured_image" :src="$page.post.featured_image.replace('/static', '')" :alt="`Featured image for ${$page.post.title}`" />
 
-          <div v-html="$page.post.content_section ? $page.post.content_section : ''" />
-          <div v-html="$page.post.code_section ? $page.post.code_section.code : ''" />
+          <div class="sm:w-2/3 mx-auto mt-10">
+            <div v-html="$page.post.content" />
+            <div v-html="$page.post.html.code" />
+          </div>
         </article>
-        <div class="w-full h-full sm:w-1/4 bg-gray-200">
+        <!-- <div class="w-full h-full sm:w-1/4 bg-gray-200">
           <p class="mb-4">
             And blowing into maximum warp speed, you appeared for an instant to be in two places at once. Shields up! Rrrrred alert! Your shields were failing,
             sir. Some days you get the bear, and some days the bear gets you.
@@ -55,14 +43,30 @@
             break my oath of loyalty to Starfleet. The unexpected is our normal routine. Sure. You'd be surprised how far a hug goes with Geordi, or Worf. I
             recommend you don't fire until you're within 40,000 kilometers. Wait a minute - you've been declared dead. You can't give orders around here.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </Layout>
 </template>
 
+<page-query>
+  query Post($id: ID!) {
+    post(id: $id) {
+      title
+      published_date
+      category { category }
+      featured_image(width:800)
+      image_caption
+      content
+      html { code }
+    }
+  }
+</page-query>
+
 <script>
 export default {}
 </script>
 
-<style></style>
+<style lang="less">
+
+</style>

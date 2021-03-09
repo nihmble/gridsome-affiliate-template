@@ -2,7 +2,7 @@
   query Contact($id: ID!) {
     data: contact(id: $id) {
       title
-      content_section { code }
+      html { code }
     }
   }
 </page-query>
@@ -18,7 +18,7 @@
             </h1>
           </div>
 
-          <section class="bg-white px-4 py-6 max-w-4xl mx-auto" v-html="$page.data.content_section ? $page.data.content_section.code : ''" />
+          <section class="bg-white px-4 py-6 max-w-4xl mx-auto" v-html="$page.data.html.code" />
         </div>
       </div>
     </section>

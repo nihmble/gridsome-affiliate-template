@@ -37,18 +37,18 @@ module.exports = function(api) {
         getting_started: Code
         hero_image: Image
         hero_text: Code
-        content_section1: Code
-        content_section2: Code
-        content_section3: Code
-        content_section4: Code
-        content_section5: Code
+        section1: Code
+        section2: Code
+        section3: Code
+        section4: Code
+        section5: Code
       }
 
       type Blog implements Node {
         id: ID!
         title: String
         hero_image: Image
-        content_section: Code
+        html: Code
       }
 
       type Post implements Node {
@@ -63,8 +63,8 @@ module.exports = function(api) {
         thumbnail: Image
         image_caption: String
         excerpt: String
-        content_section: String
-        code_section: Code
+        content: String
+        html: Code
       }
 
       type Pages implements Node {
@@ -73,7 +73,7 @@ module.exports = function(api) {
         parent: String
         slug: String
         hero_image: Image
-        content_section: Code
+        html: Code
       }
 
       type SubPages implements Node {
@@ -82,14 +82,14 @@ module.exports = function(api) {
         parent: String
         slug: String
         hero_image: Image
-        content_section: Code
+        html: Code
       }
 
       type Contact implements Node {
         id: ID!
         title: String
         hero_image: Image
-        content_section: Code
+        html: Code
       }
     `)
   })

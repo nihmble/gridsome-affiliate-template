@@ -21,11 +21,11 @@ collections:
       - {label: "Getting Started Banner", name: "getting_started", widget: "code", required: false}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
       - {label: "Hero Text", name: "hero_text", widget: "code", required: false}
-      - {label: "Content Section [Row 1]", name: "content_section1", widget: "code", required: false}
-      - {label: "Content Section [Row 2]", name: "content_section2", widget: "code", required: false}
-      - {label: "Content Section [Row 3]", name: "content_section3", widget: "code", required: false}
-      - {label: "Content Section [Row 4]", name: "content_section4", widget: "code", required: false}
-      - {label: "Content Section [Row 5]", name: "content_section5", widget: "code", required: false}
+      - {label: "Content Section [Row 1]", name: "section1", widget: "code", required: false}
+      - {label: "Content Section [Row 2]", name: "section2", widget: "code", required: false}
+      - {label: "Content Section [Row 3]", name: "section3", widget: "code", required: false}
+      - {label: "Content Section [Row 4]", name: "section4", widget: "code", required: false}
+      - {label: "Content Section [Row 5]", name: "section5", widget: "code", required: false}
   - name: "blog"
     label: "Blog"
     folder: "_content/blog"
@@ -34,7 +34,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "hidden", default: "Blog"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-      - {label: "Content", name: "content_section", widget: "code", required: false}
+      - {label: "Content", name: "html", widget: "code", required: false}
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
     folder: "_content/blog/posts" # The path to the folder where the documents are stored
@@ -53,8 +53,8 @@ collections:
       - {label: "Thumbnail", name: "thumbnail", widget: "image", media_folder: "/static/uploads"}
       - {label: "Image Caption", name: "image_caption", widget: "string", required: false}
       - {label: "Excerpt", name: "excerpt", widget: "markdown"}
-      - {label: "Content", name: "content_section", widget: "markdown", required: false}
-      - {label: "Code", name: "code_section", widget: "code", required: false}
+      - {label: "Content", name: "content", widget: "markdown", required: false}
+      - {label: "Code", name: "html", widget: "code", required: false}
   - name: "pages"
     label: "Pages"
     folder: "_content/pages"
@@ -66,7 +66,7 @@ collections:
       - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Title will be used if Slug is left empty"}
       - {label: "Navigation Order", name: "nav_order", widget: "number", required: false, default: 0, hint: "This is the order in which it will display in the main navigation"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-      - {label: "Content", name: "content_section", widget: "code"}
+      - {label: "Content", name: "html", widget: "code"}
   # - name: "contact"
   #   label: "Contact"
   #   folder: "_content/contact"
@@ -76,7 +76,7 @@ collections:
   #     - {label: "Title", name: "title", widget: "string"}
   #     - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Title will be used if Slug is left empty"}
   #     - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-  #     - {label: "Content", name: "content_section", widget: "code"}
+  #     - {label: "Content", name: "html", widget: "code"}
 
   - name: "contact"
     label: "Contact"
@@ -86,5 +86,5 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "hidden", default: "Contact"}
       - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-      - {label: "Content", name: "content_section", widget: "code", required: false}
+      - {label: "Content", name: "html", widget: "code", required: false}
     

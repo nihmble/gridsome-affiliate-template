@@ -7,17 +7,7 @@
 module.exports = {
   siteName: 'Nihmble Affiliate Template',
   siteDescription: "You're going to be an interesting companion, Mr. Data.",
-  transformers: {
-    remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-        // ...global plugins
-      ]
-    }
-  },
-
+  
   plugins: [
     /**
      * Pages and Posts
@@ -92,6 +82,18 @@ module.exports = {
       use: 'gridsome-plugin-typescript'
     }
   ],
+
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      // plugins: [
+      //   // ...global plugins
+      //   'remark-html'
+      // ]
+    }
+  },
 
   templates: {
     Home: '/',
