@@ -17,11 +17,11 @@
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.96",
     "postcss": "^8.2.7",
-    "remark-html": "^13.0.1",
     "tailwindcss": "^2.0.3",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.2",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "gridsome-plugin-typescript": "^0.4.0",
     "less": "^4.1.1",

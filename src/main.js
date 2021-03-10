@@ -8,7 +8,7 @@ import './filters'
 import DefaultLayout from '~/layouts/Default.vue'
 
 // Styles
-import '~/assets/css/tailwind.css'
+require('~/assets/css/_tailwind.css')
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component

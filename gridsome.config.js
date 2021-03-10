@@ -4,10 +4,28 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// Adding Tailwind CSS manually since the plugin stopped working
+// Source: https://gridsome.org/docs/assets-css/#tailwind
+// Plugin: https://gridsome.org/plugins/gridsome-plugin-tailwindcss - Broken: 03/09/2021
+const tailwind = require('tailwindcss')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+const postcssPlugins = [tailwind()]
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
+
 module.exports = {
   siteName: 'Nihmble Affiliate Template',
   siteDescription: "You're going to be an interesting companion, Mr. Data.",
-  
+
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins
+      }
+    }
+  },
+
   plugins: [
     /**
      * Pages and Posts
@@ -87,7 +105,7 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      anchorClassName: 'icon icon-link'
       // plugins: [
       //   // ...global plugins
       //   'remark-html'

@@ -87,55 +87,55 @@ export default {
 </script>
 
 <style lang="less">
-// .pagination {
-//   @apply my-4;
-
-//   a {
-//     @apply mx-2 w-12 h-12 text-center items-center justify-center border border-gray-400 inline-block rounded-full font-semibold inline-flex;
-
-//     &.active {
-//       @apply bg-gray-600 text-white;
-//     }
-
-//     &:hover {
-//       @apply bg-gray-200;
-//     }
-//   }
-// }
-
 .pagination {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  @apply my-4;
 
   a {
-    color: #4B5563;
-    width: 3rem;
-    text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    height: 3rem;
-    font-weight: 600;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    border-width: 1px;
-    border-radius: 9999px;
-    --tw-border-opacity: 1;
-    border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+    @apply mx-2 w-12 h-12 text-center items-center justify-center border border-gray-400 inline-block rounded-full font-semibold inline-flex;
 
     &.active {
-      --tw-bg-opacity: 1;
-      background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
-      color: white;
+      @apply bg-gray-600 text-white;
     }
 
     &:hover {
-      color: #4B5563;
-      --tw-bg-opacity: 1;
-      background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+      @apply bg-gray-200;
     }
   }
 }
+
+// .pagination {
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+
+//   a {
+//     color: #4B5563;
+//     width: 3rem;
+//     text-align: center;
+//     margin-left: 0.5rem;
+//     margin-right: 0.5rem;
+//     height: 3rem;
+//     font-weight: 600;
+//     justify-content: center;
+//     align-items: center;
+//     display: inline-flex;
+//     border-width: 1px;
+//     border-radius: 9999px;
+//     --tw-border-opacity: 1;
+//     border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+
+//     &.active {
+//       --tw-bg-opacity: 1;
+//       background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+//       color: white;
+//     }
+
+//     &:hover {
+//       color: #4B5563;
+//       --tw-bg-opacity: 1;
+//       background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+//     }
+//   }
+// }
 
 // #blog-posts {
 //   li {
