@@ -2,6 +2,7 @@
   <Layout>
     <div class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex">
+        <!-- <article class="w-full sm:w-3/4 sm:pr-8"> -->
         <article class="w-full sm:w-auto sm:px-0 px-4">
           <header class="mb-4">
             <h1 class="post-title-bar text-xl sm:text-4xl font-semibold mb-2">

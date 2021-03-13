@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-white border-t-2 border-gray-400">
+  <div class="bg-white border-t-2 border-gray-400 mt-4 sm:mt-12">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <!-- <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="xl:col-span-1">
           <img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name" />
           <p class="mt-8 text-gray-500 text-base leading-6">
@@ -172,19 +172,25 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="mt-12 border-t border-gray-200 pt-8">
+      </div> -->
+      <!-- <div class="mt-12 border-t border-gray-200 pt-8"> -->
         <p class="text-base leading-6 text-gray-400 xl:text-center">
-          &copy; 2020 Workflow, Inc. All rights reserved.
+          &copy; {{ year }} Nihmble, LLC. All rights reserved.
         </p>
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  
+  data() {
+    return {
+      year: new Date().getFullYear()
+    }
+  },
 }
 </script>
 

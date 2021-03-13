@@ -30,7 +30,8 @@
   <Layout>
     <section class="w-full mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex flex-wrap">
-        <div class="w-full sm:w-3/4 sm:pr-8">
+        <!-- <div class="w-full sm:w-3/4 sm:pr-8"> -->
+        <div class="w-full sm:w-3/4 sm:px-0 m-auto px-4">
           <ul id="blog-posts">
             <li v-for="edge in $page.posts.edges" :key="edge.node.id" class="mb-12">
               <article>
@@ -64,7 +65,7 @@
 
           <Pager class="pagination" :info="$page.posts.pageInfo" />
         </div>
-        <div class="w-full sm:w-1/4 pr-8 bg-gray-400"></div>
+        <!-- <div class="w-full sm:w-1/4 pr-8 bg-gray-400"></div> -->
       </div>
     </section>
   </Layout>
