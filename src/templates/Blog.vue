@@ -28,7 +28,7 @@
 
 <template>
   <Layout>
-    <section class="w-full mt-4 sm:mt-12">
+    <section class="w-full py-4 mt-4 sm:mt-12">
       <div class="max-w-6xl mx-auto flex flex-wrap">
         <!-- <div class="w-full sm:w-3/4 sm:pr-8"> -->
         <div class="w-full sm:w-3/4 sm:px-0 m-auto px-4">
